@@ -6,18 +6,23 @@
   <title>TODAY</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <!-- Bootstrapより後に記述する -->
-  <link rel="stylesheet" href="css/style.css"
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <h1>TODAY</h1>
   </header>
   <div class="container">
-    <!-- <p class="date">20xx/1/18</p> -->
-  <script>
-    // 日付を表示する
-    document.write('<p class="date">20xx/1/18</p>');
-  </script>
+    <script>
+      // インスタンス化
+      var today = new Date();
+      // getMonthメソッドは1月を0としてカウントするため+1する
+      var todayhtml = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+      // 日付を表示する
+      document.write('<p class="date">' + todayhtml + '</p>');
+      // 絶対値を求める
+      // document.write(Math.abs(-10))
+    </script>
   </div>
 </body>
 </html>
